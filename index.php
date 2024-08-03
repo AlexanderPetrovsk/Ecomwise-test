@@ -90,22 +90,22 @@ class CandyCrush {
         $start = $position;
         $end = $position;
 		
-		$moveRight = true;
-		$moveLeft = true;
+        $moveRight = true;
+        $moveLeft = true;
 
         while ($moveLeft || $moveRight) {
             $stepCount++;
 			
-			$moveLeft = $start > 0 && $times[$start - 1] > $stepCount;
-			$moveRight = $end < count($times) - 1 && $times[$end + 1] > $stepCount;
+            $moveLeft = $start > 0 && $times[$start - 1] > $stepCount;
+            $moveRight = $end < count($times) - 1 && $times[$end + 1] > $stepCount;
 
-			if ($moveLeft) {
-				$start--;
-			}
+            if ($moveLeft) {
+                $start--;
+            }
 
-			if ($moveRight) {
-				$end++;
-			}
+            if ($moveRight) {
+                $end++;
+            }
 
         }
 
